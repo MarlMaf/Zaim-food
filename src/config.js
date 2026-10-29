@@ -6,6 +6,11 @@ export const restaurantConfig = {
   supportedLanguages: ["fr", "ar", "en"],
   defaultLanguage: "fr",
   maxTableNumber: 999,
+  media: {
+    heroVideoUrl: "https://upload.wikimedia.org/wikipedia/commons/e/ed/Abadir_Nomadic_Berber_PIzza.webm#t=0,18",
+    heroPosterUrl: "./assets/hero/pizza-prep-demo.svg",
+    videoCreditUrl: "https://commons.wikimedia.org/wiki/File:Abadir_Nomadic_Berber_PIzza.webm",
+  },
 };
 
 export function parseTableNumber(value, max = restaurantConfig.maxTableNumber) {
@@ -20,6 +25,10 @@ export function switchLanguage(state, language, supportedLanguages = restaurantC
   if (!supportedLanguages.includes(language)) return false;
   state.language = language;
   return true;
+}
+
+export function shouldLoadHeroVideo({ reduceMotion, smallViewport, saveData, effectiveType }) {
+  return !reduceMotion && !smallViewport && !saveData && !["slow-2g", "2g", "3g"].includes(effectiveType);
 }
 
 export function createTableUrl(baseUrl, tableNumber) {

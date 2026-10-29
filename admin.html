@@ -1,0 +1,97 @@
+<!doctype html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="theme-color" content="#f7f4ed">
+    <meta name="description" content="Temporary owner menu editor for the Zaim Food demo.">
+    <title>Zaim Food — Owner menu</title>
+    <link rel="stylesheet" href="./styles.css">
+  </head>
+  <body class="admin-page">
+    <a class="skip-link" href="#admin-main" id="admin-skip">Skip to product form</a>
+    <main class="admin-wrap" id="admin-main">
+      <header class="admin-header">
+        <a class="brand admin-brand" id="menu-return" href="./index.html">
+          <span class="brand-mark" aria-hidden="true"><span></span><span></span><span></span></span>
+          <span class="brand-copy"><strong>Zaim Food</strong><small id="admin-brand-caption">Temporary owner menu</small></span>
+        </a>
+        <div class="admin-header-actions">
+          <div class="language-switch" role="group" aria-label="Interface language">
+            <button type="button" class="language-button is-active" data-admin-language="en" aria-pressed="true">EN</button>
+            <button type="button" class="language-button" data-admin-language="fr" aria-pressed="false">FR</button>
+            <button type="button" class="language-button" data-admin-language="ar" aria-pressed="false">عربي</button>
+          </div>
+          <a class="admin-back-link" href="./index.html" id="back-to-menu">← <span id="back-label">View menu</span></a>
+        </div>
+      </header>
+
+      <section class="admin-intro">
+        <p class="section-eyebrow" id="admin-eyebrow">ZAIM FOOD / OWNER DEMO</p>
+        <h1 id="admin-title">Add a menu product</h1>
+        <p id="admin-intro-copy">Add a dish with a name and description in French, Arabic, and English. Products appear in the menu in this browser tab.</p>
+      </section>
+
+      <aside class="admin-session-warning" role="note">
+        <span class="notice-icon" aria-hidden="true">!</span>
+        <p id="session-warning">Temporary demo only: products are stored in this tab's session storage. They disappear when this tab's session ends and are not shared with customers, other tabs, or devices. This panel has no login or access control; do not use it as a production admin.</p>
+      </aside>
+      <p class="admin-status" id="admin-status" role="status" aria-live="polite"></p>
+
+      <div class="admin-layout">
+        <section class="admin-card" aria-labelledby="product-form-title">
+          <h2 id="product-form-title">Product details</h2>
+          <form id="product-form" novalidate>
+            <label class="admin-field">
+              <span id="category-label">Menu category</span>
+              <select name="category" id="product-category" required></select>
+            </label>
+
+            <fieldset class="translation-fields">
+              <legend id="names-legend">Product name — provide all three translations</legend>
+              <label class="admin-field"><span id="name-fr-label">French name</span><input name="name.fr" id="name-fr" maxlength="80" autocomplete="off" required></label>
+              <label class="admin-field"><span id="name-ar-label">Arabic name</span><input name="name.ar" id="name-ar" lang="ar" dir="rtl" maxlength="80" autocomplete="off" required></label>
+              <label class="admin-field"><span id="name-en-label">English name</span><input name="name.en" id="name-en" maxlength="80" autocomplete="off" required></label>
+            </fieldset>
+
+            <fieldset class="translation-fields">
+              <legend id="descriptions-legend">Short description — all three translations</legend>
+              <label class="admin-field"><span id="description-fr-label">French description</span><textarea name="description.fr" id="description-fr" rows="2" maxlength="240" required></textarea></label>
+              <label class="admin-field"><span id="description-ar-label">Arabic description</span><textarea name="description.ar" id="description-ar" rows="2" lang="ar" dir="rtl" maxlength="240" required></textarea></label>
+              <label class="admin-field"><span id="description-en-label">English description</span><textarea name="description.en" id="description-en" rows="2" maxlength="240" required></textarea></label>
+            </fieldset>
+
+            <label class="admin-field">
+              <span id="price-label">Price (MAD)</span>
+              <input name="price" id="product-price" type="number" inputmode="decimal" min="0" max="100000" step="0.01" dir="ltr" required>
+            </label>
+
+            <label class="admin-field">
+              <span id="image-label">Dish photo URL (optional)</span>
+              <input name="imageUrl" id="product-image" type="text" inputmode="url" dir="ltr" placeholder="./assets/menu/my-dish.webp">
+              <small id="image-help">Use a local relative path or HTTPS URL. If omitted, the category's demo illustration is shown.</small>
+            </label>
+
+            <label class="admin-field">
+              <span id="extras-label">Optional extras (optional)</span>
+              <textarea name="extras" id="product-extras" rows="3" dir="auto" placeholder="Fromage | جبن | Cheese | 8"></textarea>
+              <small id="extras-help">One per line: French name | Arabic name | English name | price in MAD.</small>
+            </label>
+
+            <button class="button button-primary admin-submit" type="submit" id="add-product-button">Add product to this session</button>
+          </form>
+        </section>
+
+        <section class="admin-card products-card" aria-labelledby="products-title">
+          <div class="products-heading">
+            <div><p class="section-eyebrow" id="products-eyebrow">SESSION CATALOG</p><h2 id="products-title">Products added here</h2></div>
+            <span class="cart-count-pill"><span id="products-count">0</span> <span id="products-count-label">products</span></span>
+          </div>
+          <p class="products-empty" id="products-empty">No owner products have been added in this tab yet.</p>
+          <ul class="owner-products" id="owner-products"></ul>
+        </section>
+      </div>
+    </main>
+    <script type="module" src="./src/admin.js"></script>
+  </body>
+</html>

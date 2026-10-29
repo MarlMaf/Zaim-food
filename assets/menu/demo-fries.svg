@@ -1,0 +1,21 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="640" height="440" viewBox="0 0 640 440" fill="none">
+  <defs><linearGradient id="bg" x1="28" y1="3" x2="616" y2="434" gradientUnits="userSpaceOnUse"><stop stop-color="#EBE9D7"/><stop offset="1" stop-color="#D5E0D3"/></linearGradient><linearGradient id="potato" x1="251" y1="69" x2="403" y2="287" gradientUnits="userSpaceOnUse"><stop stop-color="#F9D880"/><stop offset="1" stop-color="#D5913D"/></linearGradient><filter id="s" x="113" y="90" width="415" height="308" color-interpolation-filters="sRGB" filterUnits="userSpaceOnUse"><feGaussianBlur stdDeviation="14"/></filter></defs>
+  <path fill="url(#bg)" d="M0 0h640v440H0z"/><circle cx="94" cy="344" r="77" fill="#F3F4E8" fill-opacity=".65"/>
+  <ellipse cx="319" cy="334" fill="#3E4538" fill-opacity=".2" rx="187" ry="43" filter="url(#s)"/>
+  <ellipse cx="320" cy="294" rx="195" ry="80" fill="#FBF8EC"/><ellipse cx="320" cy="291" rx="167" ry="58" fill="#D7D1B9"/>
+  <g fill="url(#potato)" stroke="#D18A3E" stroke-width="5">
+    <rect x="176" y="105" width="48" height="210" rx="18" transform="rotate(-16 176 105)"/>
+    <rect x="241" y="64" width="51" height="244" rx="18" transform="rotate(-6 241 64)"/>
+    <rect x="305" y="72" width="49" height="233" rx="18" transform="rotate(4 305 72)"/>
+    <rect x="369" y="81" width="49" height="224" rx="18" transform="rotate(11 369 81)"/>
+    <rect x="422" y="125" width="47" height="184" rx="18" transform="rotate(19 422 125)"/>
+    <rect x="212" y="132" width="48" height="190" rx="18" transform="rotate(-23 212 132)"/>
+    <rect x="354" y="119" width="47" height="193" rx="18" transform="rotate(23 354 119)"/>
+  </g>
+  <g stroke="#FFE5A0" stroke-linecap="round" stroke-width="7">
+    <path d="m198 137 39 145m35-191 13 197m67-193-15 187m81-152-46 151"/>
+  </g>
+  <path fill="#DB7143" d="M132 258c0-13 11-24 24-24h42v91h-42c-13 0-24-11-24-24v-43Z"/>
+  <path fill="#F3D49A" d="M148 259c0-8 6-14 14-14h26v71h-26c-8 0-14-6-14-14v-43Z"/>
+  <path fill="#587246" d="M491 215c31-38 56-40 75-5-11 35-37 46-75 5Z"/>
+</svg>

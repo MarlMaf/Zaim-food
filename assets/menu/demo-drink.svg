@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="640" height="440" viewBox="0 0 640 440" fill="none">
+  <defs><linearGradient id="bg" x1="16" y1="3" x2="624" y2="438" gradientUnits="userSpaceOnUse"><stop stop-color="#DCEBE5"/><stop offset="1" stop-color="#D4E1D2"/></linearGradient><linearGradient id="glass" x1="249" y1="116" x2="403" y2="336" gradientUnits="userSpaceOnUse"><stop stop-color="#FFFCED" stop-opacity=".85"/><stop offset="1" stop-color="#B9DBD1" stop-opacity=".92"/></linearGradient><linearGradient id="drink" x1="274" y1="176" x2="385" y2="319" gradientUnits="userSpaceOnUse"><stop stop-color="#F5C96C"/><stop offset="1" stop-color="#E67C45"/></linearGradient><filter id="s" x="175" y="260" width="292" height="142" color-interpolation-filters="sRGB" filterUnits="userSpaceOnUse"><feGaussianBlur stdDeviation="13"/></filter></defs>
+  <path fill="url(#bg)" d="M0 0h640v440H0z"/><circle cx="497" cy="95" r="74" fill="#EFF4E6" fill-opacity=".7"/>
+  <ellipse cx="321" cy="333" fill="#33493D" fill-opacity=".19" rx="128" ry="37" filter="url(#s)"/>
+  <ellipse cx="320" cy="330" rx="134" ry="33" fill="#FAF8EF"/><ellipse cx="320" cy="330" rx="111" ry="19" fill="#D9D4BD"/>
+  <path fill="#A4C6BB" d="m268 99 39-8 67 76-13 12-69-70-17 5-7-15Z"/>
+  <path fill="url(#glass)" stroke="#F9FFF5" stroke-width="8" d="m228 134 184 4-19 181c-3 29-24 49-53 49h-43c-30 0-51-20-54-49l-15-185Z"/>
+  <path fill="url(#drink)" d="m243 205 155 2-10 111c-2 22-18 36-42 36h-43c-26 0-41-14-43-36l-17-113Z"/>
+  <path fill="#F7E8C4" d="M243 204c25-12 49 11 74 0 27-12 47 10 66 0 7-4 14-4 19 0l-2 18c-23 11-45-10-68 1-26 12-50-11-75 1-6 3-11 4-16 3l2-23Z"/>
+  <g fill="#F8F0D8" fill-opacity=".8"><circle cx="281" cy="241" r="9"/><circle cx="340" cy="272" r="7"/><circle cx="302" cy="305" r="8"/><circle cx="366" cy="232" r="6"/></g>
+  <circle cx="390" cy="152" r="33" fill="#F2C76A"/><circle cx="390" cy="152" r="25" fill="#F8E3A0"/><circle cx="390" cy="152" r="4" fill="#E39749"/>
+  <path fill="#577548" d="M393 115c26-35 50-34 68-2-16 31-39 39-68 2Z"/>
+  <path stroke="#FFF" stroke-opacity=".8" stroke-linecap="round" stroke-width="7" d="m254 157 12 139"/>
+</svg>

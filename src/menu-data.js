@@ -13,13 +13,23 @@ const demoDescription = {
   en: "Demo description to replace with the restaurant's own recipe.",
 };
 
+const dishImage = (src, name) => ({
+  src,
+  kind: "demo",
+  alt: {
+    fr: `Illustration de démonstration : ${name.fr}.`,
+    ar: `رسم توضيحي تجريبي: ${name.ar}.`,
+    en: `Demo illustration: ${name.en}.`,
+  },
+});
+
 export const menuItems = [
   {
     id: "classic-burger",
     category: "burgers",
     name: { fr: "Le Classique", ar: "الكلاسيكي", en: "The Classic" },
     description: demoDescription,
-    image: null,
+    image: dishImage("./assets/menu/demo-burger.svg", { fr: "Le Classique", ar: "الكلاسيكي", en: "The Classic" }),
     price: 58,
     extras: [
       { id: "cheese", name: { fr: "Fromage en plus", ar: "جبن إضافي", en: "Extra cheese" }, price: 8 },
@@ -31,6 +41,7 @@ export const menuItems = [
     category: "burgers",
     name: { fr: "Le Végétal", ar: "النباتي", en: "The Garden" },
     description: demoDescription,
+    image: dishImage("./assets/menu/demo-burger.svg", { fr: "Le Végétal", ar: "النباتي", en: "The Garden" }),
     price: 52,
     extras: [{ id: "cheese", name: { fr: "Fromage en plus", ar: "جبن إضافي", en: "Extra cheese" }, price: 8 }],
   },
@@ -39,6 +50,7 @@ export const menuItems = [
     category: "sandwiches",
     name: { fr: "Le Marché", ar: "السوق", en: "The Market" },
     description: demoDescription,
+    image: dishImage("./assets/menu/demo-sandwich.svg", { fr: "Le Marché", ar: "السوق", en: "The Market" }),
     price: 42,
     extras: [{ id: "sauce", name: { fr: "Sauce en plus", ar: "صلصة إضافية", en: "Extra sauce" }, price: 4 }],
   },
@@ -47,6 +59,7 @@ export const menuItems = [
     category: "sandwiches",
     name: { fr: "Le Toasté", ar: "المحمّص", en: "The Toasted" },
     description: demoDescription,
+    image: dishImage("./assets/menu/demo-sandwich.svg", { fr: "Le Toasté", ar: "المحمّص", en: "The Toasted" }),
     price: 46,
     extras: [{ id: "cheese", name: { fr: "Fromage en plus", ar: "جبن إضافي", en: "Extra cheese" }, price: 8 }],
   },
@@ -55,6 +68,7 @@ export const menuItems = [
     category: "tacos",
     name: { fr: "Tacos maison", ar: "تاكوس الدار", en: "House tacos" },
     description: demoDescription,
+    image: dishImage("./assets/menu/demo-tacos.svg", { fr: "Tacos maison", ar: "تاكوس الدار", en: "House tacos" }),
     price: 49,
     extras: [{ id: "sauce", name: { fr: "Sauce en plus", ar: "صلصة إضافية", en: "Extra sauce" }, price: 4 }],
   },
@@ -63,6 +77,7 @@ export const menuItems = [
     category: "tacos",
     name: { fr: "Tacos croustillants", ar: "تاكوس مقرمش", en: "Crispy tacos" },
     description: demoDescription,
+    image: dishImage("./assets/menu/demo-tacos.svg", { fr: "Tacos croustillants", ar: "تاكوس مقرمش", en: "Crispy tacos" }),
     price: 54,
     extras: [{ id: "cheese", name: { fr: "Fromage en plus", ar: "جبن إضافي", en: "Extra cheese" }, price: 8 }],
   },
@@ -71,6 +86,7 @@ export const menuItems = [
     category: "sides",
     name: { fr: "Frites dorées", ar: "بطاطس ذهبية", en: "Golden fries" },
     description: demoDescription,
+    image: dishImage("./assets/menu/demo-fries.svg", { fr: "Frites dorées", ar: "بطاطس ذهبية", en: "Golden fries" }),
     price: 20,
     extras: [{ id: "sauce", name: { fr: "Sauce en plus", ar: "صلصة إضافية", en: "Extra sauce" }, price: 4 }],
   },
@@ -79,6 +95,7 @@ export const menuItems = [
     category: "sides",
     name: { fr: "Petites bouchées", ar: "لقيمات للمشاركة", en: "Little bites" },
     description: demoDescription,
+    image: dishImage("./assets/menu/demo-bites.svg", { fr: "Petites bouchées", ar: "لقيمات للمشاركة", en: "Little bites" }),
     price: 26,
     extras: [],
   },
@@ -87,6 +104,7 @@ export const menuItems = [
     category: "drinks",
     name: { fr: "Pétillant agrumes", ar: "فوّار الحمضيات", en: "Citrus fizz" },
     description: demoDescription,
+    image: dishImage("./assets/menu/demo-drink.svg", { fr: "Pétillant agrumes", ar: "فوّار الحمضيات", en: "Citrus fizz" }),
     price: 18,
     extras: [],
   },
@@ -95,6 +113,7 @@ export const menuItems = [
     category: "drinks",
     name: { fr: "Eau plate", ar: "ماء", en: "Still water" },
     description: demoDescription,
+    image: dishImage("./assets/menu/demo-water.svg", { fr: "Eau plate", ar: "ماء", en: "Still water" }),
     price: 12,
     extras: [],
   },

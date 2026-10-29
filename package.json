@@ -3,7 +3,7 @@
   "private": true,
   "type": "module",
   "scripts": {
-    "lint": "node --check src/config.js && node --check src/menu-data.js && node --check src/order.js && node --check src/app.js && node --check tests/order.test.js",
+    "lint": "node --check src/config.js && node --check src/menu-data.js && node --check src/catalog.js && node --check src/order.js && node --check src/app.js && node --check src/admin.js && node --check tests/order.test.js",
     "test": "node --test"
   }
 }

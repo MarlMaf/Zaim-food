@@ -10,41 +10,53 @@
   </head>
   <body>
     <a class="skip-link" href="#main-content">Skip to menu</a>
-    <header class="site-header page-wrap" id="site-header"></header>
 
     <main id="main-content">
+      <header class="site-header page-wrap" id="site-header"></header>
       <section class="hero page-wrap" id="top" aria-labelledby="welcome-title">
+        <img class="hero-poster" src="./assets/hero/pizza-prep-demo.svg" alt="" width="1600" height="900" fetchpriority="high">
+        <video class="hero-video" muted loop playsinline preload="none" poster="./assets/hero/pizza-prep-demo.svg" aria-hidden="true"></video>
+        <div class="hero-overlay" aria-hidden="true"></div>
         <div class="hero-copy">
           <div class="eyebrow"><span class="eyebrow-dot"></span><span id="demo-price-label">Prix et contenu illustratifs</span></div>
           <h1 id="welcome-title">Bienvenue chez Zaim Food</h1>
           <p id="welcome-copy">Menu de démonstration.</p>
-          <a class="hero-link" href="#menu"><span id="menu-link-label">Le menu</span><span aria-hidden="true">↓</span></a>
+          <div class="hero-actions">
+            <a class="hero-link" href="#menu"><span id="menu-link-label">Le menu</span><span aria-hidden="true">↗</span></a>
+            <a class="hero-secondary-link" href="#table-panel"><span id="table-link-label">Choisir ma table</span><span aria-hidden="true">↓</span></a>
+          </div>
+          <a class="hero-media-credit" href="https://commons.wikimedia.org/wiki/File:Abadir_Nomadic_Berber_PIzza.webm" target="_blank" rel="noopener noreferrer">
+            <span class="credit-dot" aria-hidden="true"></span>
+            <span id="hero-media-credit-label">Demo footage · not filmed at Zaim Food</span>
+          </a>
         </div>
-        <div class="hero-art" aria-hidden="true">
-          <div class="art-sun"></div><div class="art-plate"><span class="art-food"></span><span class="art-leaf leaf-one"></span><span class="art-leaf leaf-two"></span><span class="art-tomato"></span></div>
-          <div class="art-stamp">BON<br>APPÉTIT</div>
-        </div>
-        <span class="hero-corner" aria-hidden="true">ZAIM<br>FOOD</span>
+        <a class="hero-scroll" href="#table-panel" aria-label="Scroll to table selection">
+          <span class="scroll-line" aria-hidden="true"></span><span id="scroll-label">SCROLL TO EXPLORE</span>
+        </a>
+        <span class="hero-index" aria-hidden="true">01 <span></span> ZAIM FOOD</span>
       </section>
 
       <section class="notice page-wrap" aria-label="Demo information" id="demo-notice">
-        <span class="notice-icon" aria-hidden="true">i</span>
+        <span class="notice-tag" id="demo-tag">MENU DE DÉMONSTRATION</span>
+        <span class="notice-divider" aria-hidden="true"></span>
         <p id="demo-notice-copy">Menu de démonstration — les plats, textes et prix sont illustratifs.</p>
-        <span class="notice-tag" id="demo-tag">DÉMO</span>
+        <span class="notice-icon" aria-hidden="true">↗</span>
       </section>
+      <p class="catalog-warning page-wrap" id="catalog-warning" role="status" hidden></p>
 
       <section class="table-panel page-wrap" id="table-panel" aria-live="polite">
         <span class="table-symbol" aria-hidden="true">⌖</span>
         <div id="table-status"></div>
+        <a class="table-menu-link" href="#menu" aria-label="Browse menu"><span id="table-menu-label">Browse menu</span><span aria-hidden="true">↗</span></a>
       </section>
 
       <section class="menu-section page-wrap" id="menu" aria-labelledby="menu-title">
         <div class="section-heading">
-          <div><p class="section-eyebrow" id="menu-eyebrow">01 / ZAIM FOOD</p><h2 id="menu-title">Le menu</h2><p id="menu-intro">Une envie en tête ?</p></div>
+          <div class="menu-title-group"><p class="section-eyebrow" id="menu-eyebrow">02 / LA CARTE</p><h2 id="menu-title">Le menu</h2><p id="menu-intro">Une envie en tête ?</p></div>
           <label class="search-box">
             <span class="search-icon" aria-hidden="true">⌕</span>
             <input id="menu-search" type="search" placeholder="Rechercher un plat" aria-label="Rechercher dans le menu">
-            <kbd>/</kbd>
+            <span class="search-hint" id="search-hint">TROUVER</span>
           </label>
         </div>
         <nav class="category-nav" id="category-nav" aria-label="Menu categories"></nav>
@@ -53,7 +65,7 @@
 
       <section class="order-section page-wrap" id="cart-section" aria-labelledby="cart-title">
         <div class="order-heading">
-          <div><p class="section-eyebrow" id="cart-eyebrow">02 / À VOUS DE JOUER</p><h2 id="cart-title">Votre commande</h2></div>
+          <div class="order-title-group"><p class="section-eyebrow" id="cart-eyebrow">03 / À VOUS DE JOUER</p><h2 id="cart-title">Votre commande</h2><p id="order-intro">Votre sélection, votre table, votre rythme.</p></div>
           <span class="cart-table-pill"><span id="cart-table-label">Table</span><strong id="cart-table">—</strong></span>
           <span class="cart-count-pill"><span id="cart-count" aria-live="polite">0</span> <span id="cart-count-word">articles</span></span>
         </div>
@@ -68,9 +80,11 @@
     </a>
 
     <footer class="site-footer page-wrap">
-      <div class="footer-brand"><span class="brand-mark" aria-hidden="true"><span></span><span></span><span></span></span><strong>Zaim Food</strong></div>
-      <p id="footer-demo">Menu de démonstration — contenu à valider par le restaurant.</p>
-      <span>© Zaim Food</span>
+      <div class="footer-main">
+        <a class="footer-brand" href="#top"><span class="brand-mark" aria-hidden="true"><span></span><span></span><span></span></span><strong>Zaim Food</strong></a>
+        <p id="footer-demo">Menu de démonstration — contenu à valider par le restaurant.</p>
+      </div>
+      <div class="footer-meta"><a class="owner-link" id="manage-menu-link" href="./admin.html">Owner menu panel</a><span>© Zaim Food</span></div>
     </footer>
 
     <dialog class="review-dialog" id="review-dialog" aria-labelledby="review-title">
