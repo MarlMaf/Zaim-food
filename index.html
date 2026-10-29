@@ -1,0 +1,103 @@
+<!doctype html>
+<html lang="fr" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="theme-color" content="#f7f4ed">
+    <meta name="description" content="Menu de démonstration Zaim Food.">
+    <title>Zaim Food — Menu</title>
+    <link rel="stylesheet" href="./styles.css">
+  </head>
+  <body>
+    <a class="skip-link" href="#main-content">Skip to menu</a>
+    <header class="site-header page-wrap" id="site-header"></header>
+
+    <main id="main-content">
+      <section class="hero page-wrap" id="top" aria-labelledby="welcome-title">
+        <div class="hero-copy">
+          <div class="eyebrow"><span class="eyebrow-dot"></span><span id="demo-price-label">Prix et contenu illustratifs</span></div>
+          <h1 id="welcome-title">Bienvenue chez Zaim Food</h1>
+          <p id="welcome-copy">Menu de démonstration.</p>
+          <a class="hero-link" href="#menu"><span id="menu-link-label">Le menu</span><span aria-hidden="true">↓</span></a>
+        </div>
+        <div class="hero-art" aria-hidden="true">
+          <div class="art-sun"></div><div class="art-plate"><span class="art-food"></span><span class="art-leaf leaf-one"></span><span class="art-leaf leaf-two"></span><span class="art-tomato"></span></div>
+          <div class="art-stamp">BON<br>APPÉTIT</div>
+        </div>
+        <span class="hero-corner" aria-hidden="true">ZAIM<br>FOOD</span>
+      </section>
+
+      <section class="notice page-wrap" aria-label="Demo information" id="demo-notice">
+        <span class="notice-icon" aria-hidden="true">i</span>
+        <p id="demo-notice-copy">Menu de démonstration — les plats, textes et prix sont illustratifs.</p>
+        <span class="notice-tag" id="demo-tag">DÉMO</span>
+      </section>
+
+      <section class="table-panel page-wrap" id="table-panel" aria-live="polite">
+        <span class="table-symbol" aria-hidden="true">⌖</span>
+        <div id="table-status"></div>
+      </section>
+
+      <section class="menu-section page-wrap" id="menu" aria-labelledby="menu-title">
+        <div class="section-heading">
+          <div><p class="section-eyebrow" id="menu-eyebrow">01 / ZAIM FOOD</p><h2 id="menu-title">Le menu</h2><p id="menu-intro">Une envie en tête ?</p></div>
+          <label class="search-box">
+            <span class="search-icon" aria-hidden="true">⌕</span>
+            <input id="menu-search" type="search" placeholder="Rechercher un plat" aria-label="Rechercher dans le menu">
+            <kbd>/</kbd>
+          </label>
+        </div>
+        <nav class="category-nav" id="category-nav" aria-label="Menu categories"></nav>
+        <div class="menu-grid" id="menu-grid" aria-live="polite"></div>
+      </section>
+
+      <section class="order-section page-wrap" id="cart-section" aria-labelledby="cart-title">
+        <div class="order-heading">
+          <div><p class="section-eyebrow" id="cart-eyebrow">02 / À VOUS DE JOUER</p><h2 id="cart-title">Votre commande</h2></div>
+          <span class="cart-table-pill"><span id="cart-table-label">Table</span><strong id="cart-table">—</strong></span>
+          <span class="cart-count-pill"><span id="cart-count" aria-live="polite">0</span> <span id="cart-count-word">articles</span></span>
+        </div>
+        <div class="order-card" id="cart-content"></div>
+        <p class="provisional-copy"><span aria-hidden="true">✳</span> <span id="provisional-label">Traductions provisoires</span></p>
+      </section>
+    </main>
+
+    <a class="mobile-cart-button" href="#cart-section" aria-label="Voir la commande">
+      <span id="cart-shortcut-label">Voir la commande</span>
+      <span class="mobile-cart-count" id="mobile-cart-count">0</span>
+    </a>
+
+    <footer class="site-footer page-wrap">
+      <div class="footer-brand"><span class="brand-mark" aria-hidden="true"><span></span><span></span><span></span></span><strong>Zaim Food</strong></div>
+      <p id="footer-demo">Menu de démonstration — contenu à valider par le restaurant.</p>
+      <span>© Zaim Food</span>
+    </footer>
+
+    <dialog class="review-dialog" id="review-dialog" aria-labelledby="review-title">
+      <div class="dialog-top">
+        <div><p class="section-eyebrow" id="review-eyebrow">03 / RÉCAPITULATIF</p><h2 id="review-title">Un dernier coup d’œil</h2></div>
+        <button class="icon-button" id="close-review" type="button" aria-label="Fermer">×</button>
+      </div>
+      <p class="dialog-intro" id="review-help">Vérifiez votre commande avant de continuer vers WhatsApp.</p>
+      <div class="review-table"><span id="review-table-label">Table</span><strong id="review-table"></strong></div>
+      <div id="review-content"></div>
+      <div class="customer-fields">
+        <label><span id="name-label">Votre prénom (facultatif)</span><input id="customer-name" name="customerName" maxlength="60" autocomplete="given-name"></label>
+        <label><span id="note-label">Une note pour le restaurant (facultatif)</span><textarea id="customer-note" name="note" rows="2" maxlength="240" placeholder="Écrivez une courte note"></textarea></label>
+      </div>
+      <p class="send-reminder" id="send-reminder"></p>
+      <div class="checkout-actions">
+        <button class="button button-primary" id="whatsapp-button" type="button"></button>
+        <div id="number-missing" class="number-missing" hidden></div>
+        <button class="button button-copy" id="copy-message" type="button">Copier le message</button>
+      </div>
+      <div id="message-fallback" class="message-fallback" hidden>
+        <label for="order-message" class="sr-only" id="message-label">Order message to copy</label>
+        <textarea id="order-message" rows="8" readonly dir="auto"></textarea>
+      </div>
+      <p class="checkout-status" id="checkout-status" role="status" aria-live="polite"></p>
+    </dialog>
+
+    <script type="module" src="./src/app.js"></script>
+  </body>
+</html>

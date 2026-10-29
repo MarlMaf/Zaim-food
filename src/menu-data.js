@@ -1,0 +1,101 @@
+export const categories = [
+  { id: "all", label: { fr: "Tout", ar: "الكل", en: "All" } },
+  { id: "burgers", label: { fr: "Burgers", ar: "برغر", en: "Burgers" } },
+  { id: "sandwiches", label: { fr: "Sandwichs", ar: "ساندويتشات", en: "Sandwiches" } },
+  { id: "tacos", label: { fr: "Tacos", ar: "تاكوس", en: "Tacos" } },
+  { id: "sides", label: { fr: "À partager", ar: "للمشاركة", en: "Sides" } },
+  { id: "drinks", label: { fr: "Boissons", ar: "مشروبات", en: "Drinks" } },
+];
+
+const demoDescription = {
+  fr: "Description de démonstration à remplacer par la recette du restaurant.",
+  ar: "وصف تجريبي يُستبدل بوصف المطعم المعتمد.",
+  en: "Demo description to replace with the restaurant's own recipe.",
+};
+
+export const menuItems = [
+  {
+    id: "classic-burger",
+    category: "burgers",
+    name: { fr: "Le Classique", ar: "الكلاسيكي", en: "The Classic" },
+    description: demoDescription,
+    image: null,
+    price: 58,
+    extras: [
+      { id: "cheese", name: { fr: "Fromage en plus", ar: "جبن إضافي", en: "Extra cheese" }, price: 8 },
+      { id: "sauce", name: { fr: "Sauce en plus", ar: "صلصة إضافية", en: "Extra sauce" }, price: 4 },
+    ],
+  },
+  {
+    id: "garden-burger",
+    category: "burgers",
+    name: { fr: "Le Végétal", ar: "النباتي", en: "The Garden" },
+    description: demoDescription,
+    price: 52,
+    extras: [{ id: "cheese", name: { fr: "Fromage en plus", ar: "جبن إضافي", en: "Extra cheese" }, price: 8 }],
+  },
+  {
+    id: "market-sandwich",
+    category: "sandwiches",
+    name: { fr: "Le Marché", ar: "السوق", en: "The Market" },
+    description: demoDescription,
+    price: 42,
+    extras: [{ id: "sauce", name: { fr: "Sauce en plus", ar: "صلصة إضافية", en: "Extra sauce" }, price: 4 }],
+  },
+  {
+    id: "toasted-sandwich",
+    category: "sandwiches",
+    name: { fr: "Le Toasté", ar: "المحمّص", en: "The Toasted" },
+    description: demoDescription,
+    price: 46,
+    extras: [{ id: "cheese", name: { fr: "Fromage en plus", ar: "جبن إضافي", en: "Extra cheese" }, price: 8 }],
+  },
+  {
+    id: "house-tacos",
+    category: "tacos",
+    name: { fr: "Tacos maison", ar: "تاكوس الدار", en: "House tacos" },
+    description: demoDescription,
+    price: 49,
+    extras: [{ id: "sauce", name: { fr: "Sauce en plus", ar: "صلصة إضافية", en: "Extra sauce" }, price: 4 }],
+  },
+  {
+    id: "crispy-tacos",
+    category: "tacos",
+    name: { fr: "Tacos croustillants", ar: "تاكوس مقرمش", en: "Crispy tacos" },
+    description: demoDescription,
+    price: 54,
+    extras: [{ id: "cheese", name: { fr: "Fromage en plus", ar: "جبن إضافي", en: "Extra cheese" }, price: 8 }],
+  },
+  {
+    id: "golden-fries",
+    category: "sides",
+    name: { fr: "Frites dorées", ar: "بطاطس ذهبية", en: "Golden fries" },
+    description: demoDescription,
+    price: 20,
+    extras: [{ id: "sauce", name: { fr: "Sauce en plus", ar: "صلصة إضافية", en: "Extra sauce" }, price: 4 }],
+  },
+  {
+    id: "sharing-bites",
+    category: "sides",
+    name: { fr: "Petites bouchées", ar: "لقيمات للمشاركة", en: "Little bites" },
+    description: demoDescription,
+    price: 26,
+    extras: [],
+  },
+  {
+    id: "citrus-fizz",
+    category: "drinks",
+    name: { fr: "Pétillant agrumes", ar: "فوّار الحمضيات", en: "Citrus fizz" },
+    description: demoDescription,
+    price: 18,
+    extras: [],
+  },
+  {
+    id: "still-water",
+    category: "drinks",
+    name: { fr: "Eau plate", ar: "ماء", en: "Still water" },
+    description: demoDescription,
+    price: 12,
+    extras: [],
+  },
+];
