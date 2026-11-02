@@ -3,5 +3,5 @@
 /data/zaim.sqlite3-wal
 /.env
 __pycache__/
-*.py[cod]*.mov
+*.py[cod]
 *.mov
