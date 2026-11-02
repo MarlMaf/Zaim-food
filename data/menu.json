@@ -1,0 +1,405 @@
+{
+  "categories": [
+    {
+      "id": "all",
+      "label": {
+        "fr": "Tout",
+        "ar": "الكل",
+        "en": "All"
+      }
+    },
+    {
+      "id": "kebabs",
+      "label": {
+        "fr": "Kebabs",
+        "ar": "كباب",
+        "en": "Kebabs"
+      }
+    },
+    {
+      "id": "tacos",
+      "label": {
+        "fr": "Tacos",
+        "ar": "تاكوس",
+        "en": "Tacos"
+      }
+    },
+    {
+      "id": "sandwiches",
+      "label": {
+        "fr": "Sandwichs",
+        "ar": "ساندويتشات",
+        "en": "Sandwiches"
+      }
+    },
+    {
+      "id": "menus",
+      "label": {
+        "fr": "Menus",
+        "ar": "وجبات",
+        "en": "Menus"
+      }
+    },
+    {
+      "id": "drinks",
+      "label": {
+        "fr": "Boissons",
+        "ar": "مشروبات",
+        "en": "Drinks"
+      }
+    }
+  ],
+  "menuItems": [
+    {
+      "id": "kebab-classique",
+      "category": "kebabs",
+      "price": 35,
+      "popular": false,
+      "highlight": false,
+      "extras": [],
+      "name": {
+        "fr": "Kebab classique",
+        "ar": "كباب كلاسيك",
+        "en": "Classic kebab"
+      },
+      "description": {
+        "fr": "Pain, viande, salade, tomate, oignons et sauce.",
+        "ar": "خبز، لحم، خس، طماطم، بصل وصلصة.",
+        "en": "Bread, meat, lettuce, tomato, onions and sauce."
+      },
+      "image": {
+        "src": "./assets/hero/kebab-hero.jpg",
+        "kind": "placeholder",
+        "alt": {
+          "fr": "Photo d'exemple d'un kebab classique.",
+          "ar": "صورة مثال لكباب كلاسيك.",
+          "en": "Sample photo of a classic kebab."
+        }
+      }
+    },
+    {
+      "id": "kebab-poulet",
+      "category": "kebabs",
+      "price": 35,
+      "popular": false,
+      "highlight": false,
+      "extras": [],
+      "name": {
+        "fr": "Kebab poulet",
+        "ar": "كباب دجاج",
+        "en": "Chicken kebab"
+      },
+      "description": {
+        "fr": "Poulet grillé, crudités et sauce.",
+        "ar": "دجاج مشوي، خضار وصلصة.",
+        "en": "Grilled chicken, salad and sauce."
+      },
+      "image": {
+        "src": "./assets/hero/kebab-hero.jpg",
+        "kind": "placeholder",
+        "alt": {
+          "fr": "Photo d'exemple d'un kebab poulet.",
+          "ar": "صورة مثال لكباب دجاج.",
+          "en": "Sample photo of a chicken kebab."
+        }
+      }
+    },
+    {
+      "id": "kebab-mixte",
+      "category": "kebabs",
+      "price": 45,
+      "popular": true,
+      "highlight": false,
+      "extras": [],
+      "name": {
+        "fr": "Kebab mixte",
+        "ar": "كباب مشكل",
+        "en": "Mixed kebab"
+      },
+      "description": {
+        "fr": "Viande et poulet, crudités et sauce.",
+        "ar": "لحم ودجاج، خضار وصلصة.",
+        "en": "Meat and chicken, salad and sauce."
+      },
+      "image": {
+        "src": "./assets/hero/kebab-hero.jpg",
+        "kind": "placeholder",
+        "alt": {
+          "fr": "Photo d'exemple d'un kebab mixte.",
+          "ar": "صورة مثال لكباب مشكل.",
+          "en": "Sample photo of a mixed kebab."
+        }
+      }
+    },
+    {
+      "id": "tacos-viande",
+      "category": "tacos",
+      "price": 35,
+      "popular": false,
+      "highlight": false,
+      "extras": [],
+      "name": {
+        "fr": "Tacos viande",
+        "ar": "تاكوس لحم",
+        "en": "Meat tacos"
+      },
+      "description": {
+        "fr": "Galette, viande hachée, frites et sauce.",
+        "ar": "تورتيلا، لحم مفروم، بطاطس وصلصة.",
+        "en": "Wrap, minced meat, fries and sauce."
+      },
+      "image": {
+        "src": "./assets/menu/tacos.jpg",
+        "kind": "placeholder",
+        "alt": {
+          "fr": "Photo d'exemple d'un tacos viande.",
+          "ar": "صورة مثال لتاكوس لحم.",
+          "en": "Sample photo of a meat tacos."
+        }
+      }
+    },
+    {
+      "id": "tacos-poulet",
+      "category": "tacos",
+      "price": 40,
+      "popular": true,
+      "highlight": false,
+      "extras": [],
+      "name": {
+        "fr": "Tacos poulet",
+        "ar": "تاكوس دجاج",
+        "en": "Chicken tacos"
+      },
+      "description": {
+        "fr": "Galette, poulet, frites et sauce fromagère.",
+        "ar": "تورتيلا، دجاج، بطاطس وصلصة جبن.",
+        "en": "Wrap, chicken, fries and cheese sauce."
+      },
+      "image": {
+        "src": "./assets/menu/tacos.jpg",
+        "kind": "placeholder",
+        "alt": {
+          "fr": "Photo d'exemple d'un tacos poulet.",
+          "ar": "صورة مثال لتاكوس دجاج.",
+          "en": "Sample photo of a chicken tacos."
+        }
+      }
+    },
+    {
+      "id": "tacos-mixte",
+      "category": "tacos",
+      "price": 45,
+      "popular": false,
+      "highlight": false,
+      "extras": [],
+      "name": {
+        "fr": "Tacos mixte",
+        "ar": "تاكوس مشكل",
+        "en": "Mixed tacos"
+      },
+      "description": {
+        "fr": "Viande et poulet, frites et sauce au choix.",
+        "ar": "لحم ودجاج، بطاطس وصلصة حسب الاختيار.",
+        "en": "Meat and chicken, fries and sauce."
+      },
+      "image": {
+        "src": "./assets/menu/tacos.jpg",
+        "kind": "placeholder",
+        "alt": {
+          "fr": "Photo d'exemple d'un tacos mixte.",
+          "ar": "صورة مثال لتاكوس مشكل.",
+          "en": "Sample photo of a mixed tacos."
+        }
+      }
+    },
+    {
+      "id": "sandwich-kefta",
+      "category": "sandwiches",
+      "price": 30,
+      "popular": false,
+      "highlight": false,
+      "extras": [],
+      "name": {
+        "fr": "Sandwich kefta",
+        "ar": "ساندويتش كفتة",
+        "en": "Kefta sandwich"
+      },
+      "description": {
+        "fr": "Kefta, salade, tomate et sauce.",
+        "ar": "كفتة، خس، طماطم وصلصة.",
+        "en": "Kefta, lettuce, tomato and sauce."
+      },
+      "image": {
+        "src": "./assets/menu/sandwich.jpg",
+        "kind": "placeholder",
+        "alt": {
+          "fr": "Photo d'exemple d'un sandwich kefta.",
+          "ar": "صورة مثال لساندويتش كفتة.",
+          "en": "Sample photo of a kefta sandwich."
+        }
+      }
+    },
+    {
+      "id": "sandwich-escalope",
+      "category": "sandwiches",
+      "price": 32,
+      "popular": false,
+      "highlight": false,
+      "extras": [],
+      "name": {
+        "fr": "Sandwich escalope",
+        "ar": "ساندويتش إسكالوب",
+        "en": "Escalope sandwich"
+      },
+      "description": {
+        "fr": "Escalope panée, frites et sauce.",
+        "ar": "إسكالوب مقلي، بطاطس وصلصة.",
+        "en": "Breaded escalope, fries and sauce."
+      },
+      "image": {
+        "src": "./assets/menu/sandwich.jpg",
+        "kind": "placeholder",
+        "alt": {
+          "fr": "Photo d'exemple d'un sandwich escalope.",
+          "ar": "صورة مثال لساندويتش إسكالوب.",
+          "en": "Sample photo of an escalope sandwich."
+        }
+      }
+    },
+    {
+      "id": "menu-gare",
+      "category": "menus",
+      "price": 55,
+      "popular": true,
+      "highlight": true,
+      "extras": [],
+      "name": {
+        "fr": "Menu kebab",
+        "ar": "وجبة كباب",
+        "en": "Kebab menu"
+      },
+      "description": {
+        "fr": "Kebab, frites et boisson.",
+        "ar": "كباب، بطاطس ومشروب.",
+        "en": "Kebab, fries and a drink."
+      },
+      "image": {
+        "src": "./assets/menu/combo.jpg",
+        "kind": "placeholder",
+        "alt": {
+          "fr": "Photo d'exemple du menu kebab, frites et boisson.",
+          "ar": "صورة مثال لوجبة كباب مع البطاطس والمشروب.",
+          "en": "Sample photo of the kebab menu with fries and a drink."
+        }
+      }
+    },
+    {
+      "id": "menu-tacos",
+      "category": "menus",
+      "price": 50,
+      "popular": false,
+      "highlight": false,
+      "extras": [],
+      "name": {
+        "fr": "Menu tacos",
+        "ar": "وجبة تاكوس",
+        "en": "Tacos menu"
+      },
+      "description": {
+        "fr": "Tacos et boisson.",
+        "ar": "تاكوس ومشروب.",
+        "en": "Tacos and a drink."
+      },
+      "image": {
+        "src": "./assets/menu/combo.jpg",
+        "kind": "placeholder",
+        "alt": {
+          "fr": "Photo d'exemple du menu tacos et boisson.",
+          "ar": "صورة مثال لوجبة تاكوس مع مشروب.",
+          "en": "Sample photo of the tacos menu with a drink."
+        }
+      }
+    },
+    {
+      "id": "soda",
+      "category": "drinks",
+      "price": 10,
+      "popular": false,
+      "highlight": false,
+      "extras": [],
+      "name": {
+        "fr": "Soda",
+        "ar": "صودا",
+        "en": "Soda"
+      },
+      "description": {
+        "fr": "Canette fraîche.",
+        "ar": "علبة باردة.",
+        "en": "A cold can."
+      },
+      "image": {
+        "src": "./assets/menu/drink.jpg",
+        "kind": "placeholder",
+        "alt": {
+          "fr": "Photo d'exemple d'un soda.",
+          "ar": "صورة مثال لصودا.",
+          "en": "Sample photo of a soda."
+        }
+      }
+    },
+    {
+      "id": "eau",
+      "category": "drinks",
+      "price": 8,
+      "popular": false,
+      "highlight": false,
+      "extras": [],
+      "name": {
+        "fr": "Eau",
+        "ar": "ماء",
+        "en": "Water"
+      },
+      "description": {
+        "fr": "Bouteille d'eau.",
+        "ar": "قارورة ماء.",
+        "en": "A bottle of water."
+      },
+      "image": {
+        "src": "./assets/menu/drink.jpg",
+        "kind": "placeholder",
+        "alt": {
+          "fr": "Photo d'exemple d'une bouteille d'eau.",
+          "ar": "صورة مثال لقارورة ماء.",
+          "en": "Sample photo of a bottle of water."
+        }
+      }
+    },
+    {
+      "id": "jus",
+      "category": "drinks",
+      "price": 15,
+      "popular": false,
+      "highlight": false,
+      "extras": [],
+      "name": {
+        "fr": "Jus d'orange",
+        "ar": "عصير برتقال",
+        "en": "Orange juice"
+      },
+      "description": {
+        "fr": "Verre de jus d'orange.",
+        "ar": "كأس عصير برتقال.",
+        "en": "A glass of orange juice."
+      },
+      "image": {
+        "src": "./assets/menu/drink.jpg",
+        "kind": "placeholder",
+        "alt": {
+          "fr": "Photo d'exemple d'un jus d'orange.",
+          "ar": "صورة مثال لعصير برتقال.",
+          "en": "Sample photo of an orange juice."
+        }
+      }
+    }
+  ]
+}

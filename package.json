@@ -1,0 +1,9 @@
+{
+  "name": "zaim-kebab",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "lint": "node --check src/config.js && node --check src/content.js && node --check src/menu-data.js && node --check src/order.js && node --check src/shell.js && node --check src/not-found.js && node --check src/api.js && node --check src/deploy-config.js && node --check src/app.js && node --check src/admin.js && node --check sw.js && node --check tests/order.test.js && python -m py_compile backend.py serve.py tests/test_backend.py",
+    "test": "node --test && python -m unittest discover -s tests -p 'test_*.py'"
+  }
+}

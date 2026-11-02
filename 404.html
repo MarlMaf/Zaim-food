@@ -1,0 +1,67 @@
+<!doctype html>
+<html lang="fr" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="robots" content="noindex">
+    <meta name="theme-color" content="#4cae49">
+    <title>Zaïm Kebab — Page introuvable</title>
+    <link rel="icon" href="/assets/brand/favicon.svg" type="image/svg+xml">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,600&family=Noto+Sans+Arabic:wght@400;600;700&family=Outfit:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/styles.css">
+  </head>
+  <body data-page="missing">
+    <header class="site-header">
+      <a class="brand" href="/">
+        <img src="/assets/brand/logo.png" alt="Zaïm Kebab" width="826" height="334">
+      </a>
+      <nav class="site-nav" aria-label="Navigation" data-i18n="primaryNav" data-i18n-attr="aria-label">
+        <a href="/#menu" data-i18n="menuNav">Menu</a>
+        <a href="/#visit" data-i18n="findUs">Nous trouver</a>
+      </nav>
+      <div class="header-end">
+        <p class="open-mark" data-i18n="openAlways">24h/24</p>
+        <div class="language-switch" id="language-switch">
+          <button class="language-toggle" id="language-toggle" type="button" aria-expanded="false" aria-haspopup="listbox" aria-controls="language-menu">
+            <span id="language-current">FR</span>
+          </button>
+          <ul class="language-menu" id="language-menu" role="listbox" hidden>
+            <li><button type="button" role="option" data-language="fr" lang="fr">Français</button></li>
+            <li><button type="button" role="option" data-language="ar" lang="ar">العربية</button></li>
+            <li><button type="button" role="option" data-language="en" lang="en">English</button></li>
+          </ul>
+        </div>
+      </div>
+    </header>
+    <main class="missing-page page-wrap">
+      <p class="eyebrow">Zaïm Kebab</p>
+      <h1 data-i18n="missingTitle">Page introuvable</h1>
+      <p data-i18n="missingBody">Cette adresse ne mène nulle part. Le menu est toujours là.</p>
+      <a class="button button-primary" href="/#menu" data-i18n="missingBack">Retour au menu</a>
+    </main>
+    <footer class="site-footer">
+      <div class="footer-inner page-wrap">
+        <a class="footer-brand" href="/">
+          <img src="/assets/brand/logo.png" alt="" width="826" height="334">
+        </a>
+        <div class="footer-copy">
+          <p data-i18n="locationLine">À 2 min de Casa Voyageurs</p>
+          <p id="footer-note">Carte d'exemple — à remplacer par la carte du restaurant.</p>
+          <small id="footer-year">© Zaïm Kebab</small>
+        </div>
+        <nav class="footer-links">
+          <a id="footer-whatsapp" href="/#visit">Commander sur WhatsApp</a>
+          <a id="footer-maps" href="/#visit">Ouvrir dans Google Maps</a>
+          <a id="footer-yassir" href="https://delivery.yassir.com/fr/restaurants/6908b65db5f98c403eed98ca/Zaim-Kebab">Commander sur Yassir</a>
+          <a id="footer-glovo" href="https://glovoapp.com/en">Commander sur Glovo</a>
+        </nav>
+      </div>
+    </footer>
+    <script>
+      if ("serviceWorker" in navigator) navigator.serviceWorker.register("/sw.js");
+    </script>
+    <script type="module" src="/src/not-found.js"></script>
+  </body>
+</html>

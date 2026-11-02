@@ -1,0 +1,71 @@
+name: Deploy GitHub Pages
+
+on:
+  push:
+    branches: [main]
+  workflow_dispatch:
+
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
+concurrency:
+  group: github-pages
+  cancel-in-progress: true
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check out repository
+        uses: actions/checkout@v4
+      - name: Set up Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: 24
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.x"
+      - name: Run tests and lint
+        run: |
+          npm test
+          npm run lint
+      - name: Validate backend URL
+        env:
+          BACKEND_API_URL: ${{ vars.BACKEND_API_URL }}
+        run: |
+          if [[ -z "$BACKEND_API_URL" || "$BACKEND_API_URL" != https://* ]]; then
+            echo "Set the repository variable BACKEND_API_URL to the HTTPS Render service URL before deploying Pages."
+            exit 1
+          fi
+      - name: Assemble Pages site
+        env:
+          BACKEND_API_URL: ${{ vars.BACKEND_API_URL }}
+        run: |
+          rm -rf pages-build
+          mkdir -p pages-build/data pages-build/admin
+          touch pages-build/.nojekyll
+          cp index.html 404.html styles.css sw.js admin.html admin.css pages-build/
+          cp -R assets src menu pages-build/
+          cp data/menu.json pages-build/data/menu.json
+          cp admin-route/index.html pages-build/admin/index.html
+          node --input-type=module -e 'import { writeFileSync } from "node:fs"; writeFileSync("pages-build/src/deploy-config.js", `export const apiBaseUrl = ${JSON.stringify(process.env.BACKEND_API_URL.replace(/\/+$/, ""))};\n`);'
+      - name: Configure Pages
+        uses: actions/configure-pages@v5
+      - name: Upload Pages artifact
+        uses: actions/upload-pages-artifact@v3
+        with:
+          path: pages-build
+
+  deploy:
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    runs-on: ubuntu-latest
+    needs: build
+    steps:
+      - name: Deploy to GitHub Pages
+        id: deployment
+        uses: actions/deploy-pages@v4

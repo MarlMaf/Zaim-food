@@ -1,0 +1,191 @@
+<!doctype html>
+<html lang="fr" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="theme-color" content="#4cae49">
+    <meta name="description" content="Le kebab de la gare, prêt en 5 minutes. À 2 min de Casa Voyageurs.">
+    <title>Zaïm Kebab — Menu</title>
+    <link rel="icon" href="./assets/brand/favicon.svg" type="image/svg+xml">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,600&family=Noto+Sans+Arabic:wght@400;600;700&family=Outfit:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./styles.css">
+  </head>
+  <body data-page="menu">
+    <a class="skip-link" href="#menu" data-i18n="skip">Aller au menu</a>
+    <p id="app-error" class="app-error" role="alert" hidden></p>
+    <noscript class="noscript">Zaïm Kebab — Le kebab de la gare, prêt en 5 minutes. Activez JavaScript pour afficher le menu.</noscript>
+
+    <header class="site-header">
+      <a class="brand" href="#top">
+        <img src="./assets/brand/logo.png" alt="Zaïm Kebab" width="826" height="334">
+      </a>
+      <nav class="site-nav" aria-label="Navigation" data-i18n="primaryNav" data-i18n-attr="aria-label">
+        <a href="#menu" data-i18n="menuNav">Menu</a>
+        <a href="#visit" data-i18n="findUs">Nous trouver</a>
+      </nav>
+      <div class="header-end">
+        <p class="open-mark" data-i18n="openAlways">24h/24</p>
+        <div class="language-switch" id="language-switch">
+          <button class="language-toggle" id="language-toggle" type="button" aria-expanded="false" aria-haspopup="listbox" aria-controls="language-menu">
+            <span id="language-current">FR</span>
+          </button>
+          <ul class="language-menu" id="language-menu" role="listbox" hidden>
+            <li><button type="button" role="option" data-language="fr" lang="fr">Français</button></li>
+            <li><button type="button" role="option" data-language="ar" lang="ar">العربية</button></li>
+            <li><button type="button" role="option" data-language="en" lang="en">English</button></li>
+          </ul>
+        </div>
+      </div>
+    </header>
+
+    <main>
+      <section class="hero" id="top">
+        <div class="hero-media">
+          <img id="hero-poster" src="./assets/hero/kebab-hero.jpg" alt="Photo d'exemple d'un kebab, à remplacer par celle du restaurant." data-i18n="heroAlt" data-i18n-attr="alt" width="1152" height="864" fetchpriority="high" decoding="async">
+          <video id="hero-video" class="hero-video" muted loop playsinline preload="none" aria-hidden="true"></video>
+          <div class="hero-shade" aria-hidden="true"></div>
+          <div class="hero-copy">
+            <p class="hero-kicker" id="location-kicker" data-i18n="locationLine">À 2 min de Casa Voyageurs</p>
+            <h1 id="hero-line" data-i18n="heroLine">Le kebab de la gare, prêt en 5 minutes.</h1>
+            <p class="table-pill" id="table-pill" hidden></p>
+            <div class="hero-actions">
+              <a class="button button-primary" href="#menu" data-i18n="menuCta">Voir le menu</a>
+              <a class="button button-ink" id="cta-whatsapp" href="#visit" data-whatsapp-open data-i18n="whatsappCta">Commander sur WhatsApp</a>
+            </div>
+          </div>
+          <p class="hero-caption" id="hero-caption" hidden></p>
+        </div>
+      </section>
+
+      <section class="menu-section page-wrap" id="menu" aria-labelledby="menu-title">
+        <div class="menu-heading">
+          <p class="eyebrow" data-i18n="menuEyebrow">À la gare</p>
+          <h2 id="menu-title" data-i18n="menuTitle">Le menu</h2>
+          <p class="menu-intro" data-i18n="menuIntro">Kebabs, tacos, sandwichs. Le prix est sur chaque plat.</p>
+        </div>
+        <label class="search-box">
+          <span class="sr-only" data-i18n="searchLabel">Rechercher dans le menu</span>
+          <input id="menu-search" type="search" placeholder="Un kebab, un tacos…" data-i18n="searchPlaceholder" data-i18n-attr="placeholder" autocomplete="off">
+        </label>
+        <p class="menu-notice" id="menu-notice" data-i18n="menuNotice">Photos et prix d'exemple, en attendant la carte du restaurant.</p>
+        <nav class="category-nav" id="category-nav" aria-label="Catégories" data-i18n="categoriesLabel" data-i18n-attr="aria-label"></nav>
+        <div class="featured reveal" id="featured" hidden></div>
+        <div class="menu-grid" id="menu-grid" aria-live="polite"></div>
+      </section>
+
+      <section class="order-section" aria-labelledby="order-title">
+        <div class="order-inner page-wrap">
+          <div class="order-heading">
+            <p class="eyebrow" data-i18n="orderOptionsEyebrow">Pour commander</p>
+            <h2 id="order-title" data-i18n="orderOptionsTitle">Choisissez comment commander</h2>
+          </div>
+          <div class="order-paths">
+            <article class="order-path">
+              <p class="eyebrow" data-i18n="orderHere">Sur place</p>
+              <p data-i18n="orderHereText">Un plat, un message WhatsApp. Il ne reste qu'à envoyer.</p>
+              <button class="button button-primary" type="button" data-whatsapp-open data-i18n="whatsappCta">Commander sur WhatsApp</button>
+            </article>
+            <article class="order-path order-path-away">
+              <p class="eyebrow" data-i18n="orderAway">Pas à table</p>
+              <p data-i18n="orderAwayText">Yassir livre ce restaurant. Glovo ouvre le site public, en attendant la page du magasin.</p>
+              <div class="delivery-links">
+                <a class="button button-primary" id="yassir-link" href="https://delivery.yassir.com/fr/restaurants/6908b65db5f98c403eed98ca/Zaim-Kebab" target="_blank" rel="noopener noreferrer">Commander sur Yassir</a>
+                <a class="button button-quiet" id="glovo-link" href="https://glovoapp.com/en" target="_blank" rel="noopener noreferrer">Commander sur Glovo</a>
+              </div>
+              <p class="path-note" id="glovo-text" data-i18n="glovoText">Glovo ouvre la page publique, pas encore la fiche du restaurant.</p>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section class="visit-section page-wrap" id="visit" aria-labelledby="visit-title">
+        <p class="eyebrow" data-i18n="visitEyebrow">Où nous trouver</p>
+        <h2 id="visit-title" data-i18n="visitTitle">Juste à côté de la gare.</h2>
+        <ul class="service-list" id="service-list"></ul>
+        <div class="place-frame">
+          <iframe class="visit-map" id="visit-map" title="Carte de Zaïm Kebab" src="https://maps.google.com/maps?q=ZAIM+KEBAB+Bd+Ba+Hmad+Casablanca&z=16&output=embed" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+          <div class="place-panel">
+            <ul class="hours-list" id="hours-list" hidden></ul>
+            <p id="hours-pending" data-i18n="hoursPending">Les horaires seront confirmés par le restaurant.</p>
+            <p id="visit-location" data-i18n="locationLine">À 2 min de Casa Voyageurs</p>
+            <p id="address-line">Bd Ba Hmad, Casablanca 20250</p>
+            <a class="text-link" id="phone-link" href="tel:+212520668222">05 20 66 82 22</a>
+            <div class="visit-actions">
+              <a class="button button-primary" id="directions-link" href="https://www.google.com/maps/dir/?api=1&destination=ZAIM+KEBAB+Bd+Ba+Hmad+Casablanca" target="_blank" rel="noopener noreferrer">Itinéraires</a>
+              <a class="text-link" id="maps-link" href="https://www.google.com/maps/search/?api=1&query=ZAIM+KEBAB+Bd+Ba+Hmad+Casablanca" target="_blank" rel="noopener noreferrer">Ouvrir dans Google Maps</a>
+            </div>
+            <p class="social-links">
+              <a id="facebook-link" href="https://www.facebook.com/profile.php?id=61575905244611" target="_blank" rel="noopener noreferrer">Facebook</a>
+              <a id="instagram-link" href="https://www.instagram.com/zaim_kebab/" target="_blank" rel="noopener noreferrer">Instagram</a>
+            </p>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <div class="footer-inner page-wrap">
+        <a class="footer-brand" href="#top">
+          <img src="./assets/brand/logo.png" alt="" width="826" height="334">
+        </a>
+        <div class="footer-copy">
+          <p data-i18n="locationLine">À 2 min de Casa Voyageurs</p>
+          <p id="footer-note">Carte d'exemple — à remplacer par la carte du restaurant.</p>
+          <small id="footer-year">© Zaïm Kebab</small>
+        </div>
+        <nav class="footer-links" aria-label="Navigation" data-i18n="primaryNav" data-i18n-attr="aria-label">
+          <a id="footer-whatsapp" href="#visit">Commander sur WhatsApp</a>
+          <a id="footer-maps" href="#visit">Ouvrir dans Google Maps</a>
+          <a id="footer-yassir" href="https://delivery.yassir.com/fr/restaurants/6908b65db5f98c403eed98ca/Zaim-Kebab">Commander sur Yassir</a>
+          <a id="footer-glovo" href="https://glovoapp.com/en">Commander sur Glovo</a>
+        </nav>
+      </div>
+    </footer>
+
+    <p class="page-status" id="page-status" role="status" hidden></p>
+    <button class="to-top" id="to-top" type="button" hidden data-i18n="backToTop" data-i18n-attr="aria-label" aria-label="Haut de la page"></button>
+    <button class="cart-dock" id="cart-dock" type="button" hidden></button>
+
+    <dialog class="order-dialog" id="order-dialog" aria-labelledby="dialog-title">
+      <div class="dialog-card">
+        <div class="dialog-top">
+          <h2 id="dialog-title" data-i18n="reviewTitle">Votre commande</h2>
+          <button class="icon-button" id="close-order" type="button" aria-label="Fermer" data-i18n="close" data-i18n-attr="aria-label">×</button>
+        </div>
+        <p class="dialog-help" id="dialog-help"></p>
+        <div class="customer-fields" id="customer-fields">
+          <label>
+            <span data-i18n="customerName">Votre prénom (facultatif)</span>
+            <input id="customer-name" name="customerName" maxlength="60" autocomplete="given-name">
+          </label>
+          <label>
+            <span data-i18n="note">Une note (facultatif)</span>
+            <textarea id="customer-note" name="note" rows="2" maxlength="240" placeholder="Sans oignons, sauce à part…" data-i18n="notePlaceholder" data-i18n-attr="placeholder"></textarea>
+          </label>
+        </div>
+        <div id="review-block"></div>
+        <div class="checkout-actions">
+          <button class="button button-primary" id="whatsapp-button" type="button"></button>
+          <button class="button button-quiet" id="copy-button" type="button" data-i18n="copyMessage">Copier le message</button>
+        </div>
+        <label class="sr-only" id="message-label" for="order-message" data-i18n="messageLabel">Message à copier</label>
+        <textarea id="order-message" rows="8" readonly hidden></textarea>
+      </div>
+    </dialog>
+
+    <script>
+      if ("serviceWorker" in navigator) navigator.serviceWorker.register("./sw.js");
+    </script>
+    <script type="module">
+      import("./src/app.js").catch((error) => {
+        console.error(error);
+        const alert = document.querySelector("#app-error");
+        if (!alert) return;
+        alert.hidden = false;
+        alert.textContent = "Le menu n'a pas pu se charger. Rechargez la page.";
+      });
+    </script>
+  </body>
+</html>

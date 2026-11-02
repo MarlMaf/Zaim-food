@@ -1,0 +1,7 @@
+/data/zaim.sqlite3
+/data/zaim.sqlite3-shm
+/data/zaim.sqlite3-wal
+/.env
+__pycache__/
+*.py[cod]*.mov
+*.mov

@@ -1,0 +1,19 @@
+services:
+  - type: web
+    name: zaim-food-api
+    runtime: python
+    plan: starter
+    buildCommand: python -m py_compile backend.py serve.py
+    startCommand: python serve.py $PORT
+    healthCheckPath: /api/health
+    disk:
+      name: zaim-food-sqlite
+      mountPath: /var/data
+      sizeGB: 1
+    envVars:
+      - key: ZAIM_ADMIN_PASSWORD
+        generateValue: true
+      - key: ZAIM_DATABASE_PATH
+        value: /var/data/zaim.sqlite3
+      - key: ZAIM_CORS_ORIGINS
+        value: https://marlmaf.github.io,http://localhost:4173
