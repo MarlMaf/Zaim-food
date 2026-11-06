@@ -7,7 +7,7 @@ import {
   menuItems, parseTableNumber, shouldLoadHeroVideo, site, switchLanguage,
 } from "../src/config.js";
 import { buildOrderMessage, createWhatsAppUrl, getCartTotals, getItemUnitPrice } from "../src/order.js";
-import { apiUrl } from "../src/api.js";
+import { apiUrl, hasBackend } from "../src/api.js";
 
 const readyNetwork = { reduceMotion: false, smallViewport: false, saveData: false, effectiveType: "4g" };
 
@@ -28,6 +28,7 @@ test("table links stay on the menu path and reject unsafe bases", () => {
 });
 
 test("the API helper keeps local requests same-origin and rejects non-API paths", () => {
+  assert.equal(hasBackend, false);
   assert.equal(apiUrl("/api/menu"), "/api/menu");
   assert.equal(apiUrl("/api/menu", "https://zaim-food-api.onrender.com/"), "https://zaim-food-api.onrender.com/api/menu");
   assert.throws(() => apiUrl("/admin.html"), TypeError);

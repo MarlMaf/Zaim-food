@@ -5,7 +5,7 @@ import { buildOrderMessage, createWhatsAppUrl, getCartTotals } from "./order.js"
 import {
   applyDocumentLanguage, bindLanguageMenu, fillI18n, paintLanguageMenu, readLanguage, rememberLanguage, renderFooter,
 } from "./shell.js";
-import { apiUrl } from "./api.js";
+import { apiUrl, hasBackend } from "./api.js";
 
 const state = {
   language: site.defaultLanguage,
@@ -131,6 +131,7 @@ async function recordOrder(cart, requestKey) {
 }
 
 async function loadServerMenu() {
+  if (!hasBackend) return;
   try {
     const response = await fetch(apiUrl("/api/menu"), { cache: "no-store" });
     if (!response.ok) return;
@@ -152,7 +153,7 @@ function revealFallback(hint) {
 function openWhatsApp(cart) {
   const retryingMessage = elements.dialog.open && state.dialogMode === "message";
   state.pendingCart = cart;
-  if (cart.length) {
+  if (hasBackend && cart.length) {
     if (!retryingMessage) state.pendingOrderKey = crypto.randomUUID();
     recordOrder(cart, state.pendingOrderKey)
       .then(() => setStatus(t("orderSaved")))

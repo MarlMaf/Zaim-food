@@ -44,16 +44,11 @@ The logo used on the page is `assets/brand/logo.png`, made from `public/ZaimLogo
 
 ## Publish
 
-GitHub Pages hosts the frontend; Render hosts the Python API and its persistent SQLite disk. Static hosting alone does not provide saved orders or admin editing. Do not expose the development backend publicly without production-grade HTTPS, rate limiting, backups, and monitoring.
+GitHub Pages publishes the public menu as static files. The bundled catalog and WhatsApp ordering work without a backend; orders are not saved and admin editing is unavailable on Pages. The Python/SQLite backend and admin remain available for local development.
 
-1. Push the repository to GitHub and create a Render Blueprint from `render.yaml`. The blueprint uses a persistent 1 GB disk, which may incur a Render charge. Keep the generated `ZAIM_ADMIN_PASSWORD` private.
-2. After Render deploys, verify `https://<your-render-service>.onrender.com/api/health` returns `{"status":"ok"}`.
-3. In the GitHub repository, add the Actions variable `BACKEND_API_URL` with the Render service origin, such as `https://zaim-food-api.onrender.com` (no trailing slash).
-4. In repository Settings → Pages, select GitHub Actions as the build and deployment source, then run the `Deploy GitHub Pages` workflow.
+In repository Settings → Pages, choose GitHub Actions as the source. Pushes to `main` run the single `Deploy GitHub Pages` workflow. The public URL is `https://marlmaf.github.io/Zaim-food/`.
 
-The Pages workflow runs tests, injects the API origin, and deploys a clean static artifact. The expected project URL is `https://marlmaf.github.io/Zaim-food/`; the standalone admin page is at `/Zaim-food/admin/`. The `admin.html` route remains available too. Render CORS is restricted to the Pages origin and local development.
-
-If the backend is intentionally not deployed, the bundled catalog remains available and WhatsApp can still open, but saved orders and admin editing will not work. Set `publicBaseUrl` to the published origin, then print one QR code per table:
+Set `publicBaseUrl` to the published origin, then print one QR code per table:
 
 ```text
 <PUBLISHED_BASE_URL>/menu?table=1

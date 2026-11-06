@@ -32,26 +32,15 @@ jobs:
         run: |
           npm test
           npm run lint
-      - name: Validate backend URL
-        env:
-          BACKEND_API_URL: ${{ vars.BACKEND_API_URL }}
-        run: |
-          if [[ -z "$BACKEND_API_URL" || "$BACKEND_API_URL" != https://* ]]; then
-            echo "Set the repository variable BACKEND_API_URL to the HTTPS Render service URL before deploying Pages."
-            exit 1
-          fi
       - name: Assemble Pages site
-        env:
-          BACKEND_API_URL: ${{ vars.BACKEND_API_URL }}
         run: |
           rm -rf pages-build
-          mkdir -p pages-build/data pages-build/admin
+          mkdir -p pages-build/data
           touch pages-build/.nojekyll
-          cp index.html 404.html styles.css sw.js admin.html admin.css pages-build/
+          cp index.html 404.html styles.css sw.js pages-build/
           cp -R assets src menu pages-build/
           cp data/menu.json pages-build/data/menu.json
-          cp admin-route/index.html pages-build/admin/index.html
-          node --input-type=module -e 'import { writeFileSync } from "node:fs"; writeFileSync("pages-build/src/deploy-config.js", `export const apiBaseUrl = ${JSON.stringify(process.env.BACKEND_API_URL.replace(/\/+$/, ""))};\n`);'
+          rm -f pages-build/src/admin.js
       - name: Configure Pages
         uses: actions/configure-pages@v5
       - name: Upload Pages artifact
