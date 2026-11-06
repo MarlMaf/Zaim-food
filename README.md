@@ -44,7 +44,7 @@ The logo used on the page is `assets/brand/logo.png`, made from `public/ZaimLogo
 
 ## Publish
 
-GitHub Pages publishes the public menu as static files. The bundled catalog and WhatsApp ordering work without a backend; orders are not saved and admin editing is unavailable on Pages. The Python/SQLite backend and admin remain available for local development.
+GitHub Pages publishes the public menu as static files. The bundled catalog and WhatsApp ordering work without a backend; orders are not saved and admin editing is unavailable on Pages. The Pages artifact omits the admin screen; the Python/SQLite backend and `/admin` page remain available locally with `python serve.py`.
 
 In repository Settings → Pages, choose GitHub Actions as the source. Pushes to `main` run the single `Deploy GitHub Pages` workflow. The public URL is `https://marlmaf.github.io/Zaim-food/`.
 
