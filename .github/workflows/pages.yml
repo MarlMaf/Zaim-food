@@ -40,6 +40,7 @@ jobs:
           cp index.html 404.html styles.css sw.js pages-build/
           cp -R assets src menu pages-build/
           cp data/menu.json pages-build/data/menu.json
+          printf 'export const apiBaseUrl = "";\nexport const backendEnabled = false;\n' > pages-build/src/deploy-config.js
           rm -f pages-build/src/admin.js
       - name: Configure Pages
         uses: actions/configure-pages@v5

@@ -28,7 +28,7 @@ test("table links stay on the menu path and reject unsafe bases", () => {
 });
 
 test("the API helper keeps local requests same-origin and rejects non-API paths", () => {
-  assert.equal(hasBackend, false);
+  assert.equal(hasBackend, true);
   assert.equal(apiUrl("/api/menu"), "/api/menu");
   assert.equal(apiUrl("/api/menu", "https://zaim-food-api.onrender.com/"), "https://zaim-food-api.onrender.com/api/menu");
   assert.throws(() => apiUrl("/admin.html"), TypeError);
